@@ -1,0 +1,56 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.notification-count {
+  line-height: 12px;
+  padding: 2px 5px;
+  position: absolute;
+  right: 19px;
+  top: 6px;
+}
+
+.dropdown-menu-notifications {
+  width: 360px;
+
+  li {
+    padding: 0px 0;
+
+    a {
+      padding: 12px 24px;
+    }
+  }
+
+  .divider {
+    height: 1px;
+    margin: 3px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+  }
+
+  .see-all-notifications {
+    margin: 10px 0;
+
+    a {
+      color: #333 !important;
+    }
+  }
+}
+
+.navbar-brand {
+  margin-right: 30px;
+}
+
+.order-details {
+  margin-bottom: 30px;
+}
+
+
+
+
