@@ -8393,3 +8393,10 @@ button.close {
   margin-bottom: 30px;
 }
 
+.dropdown-style {
+  height: 34px;
+  width: 100%;
+  background: white;
+  border: 1px solid #E5E6E7;
+}
+

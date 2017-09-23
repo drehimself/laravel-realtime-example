@@ -15,8 +15,17 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import { alert, progressbar } from 'vue-strap'
+
 Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: {
+      alert, progressbar
+    },
+    data: {
+      showAlert: false,
+      progress: 10,
+    }
 });

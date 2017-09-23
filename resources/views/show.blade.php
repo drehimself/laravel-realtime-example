@@ -14,9 +14,21 @@
                         </div>
                     @endif
 
+                    <div class="progress">
+                        <progressbar :now="progress" type="success" striped animated></progressbar>
+                    </div>
+
+                    <alert v-model="showAlert" placement="top-right" duration="5000" type="success" width="400px" dismissable>
+                        <span class="icon-ok-circled alert-icon-float-left"></span>
+                        <strong>Well Done!</strong>
+                        <p>You successfully read this important alert message.</p>
+                    </alert>
+
                     <div class="order-status">
                         <strong>Order Status:</strong> {{ $order->status->name }}
                     </div>
+
+                    <hr>
 
                     <div class="order-details">
                         <strong>Order ID:</strong> {{ $order->id }} <br>
@@ -29,12 +41,7 @@
 
                     </div>
 
-
-
                     <a class="btn btn-primary" href="{{ route('user.orders') }}">Back to Orders</a>
-
-
-
 
                 </div> <!-- end panel-body -->
             </div> <!-- end panel -->
