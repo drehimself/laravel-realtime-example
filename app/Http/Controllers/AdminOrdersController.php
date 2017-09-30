@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\Status;
 use Illuminate\Http\Request;
+use App\Events\OrderStatusChanged;
 
 class AdminOrdersController extends Controller
 {
@@ -60,6 +61,8 @@ class AdminOrdersController extends Controller
 
         $order->status_id = $request->status_id;
         $order->save();
+
+        event(new OrderStatusChanged($order));
 
         return back()->with('message', 'Order Status updated successfully!');
     }

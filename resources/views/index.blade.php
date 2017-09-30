@@ -20,6 +20,8 @@
 
                 @else
 
+                    <order-alert user_id="{{ auth()->user()->id }}"></order-alert>
+
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered">
                             <thead>
@@ -49,9 +51,6 @@
                     </div> <!-- end table-responsive -->
 
                 @endif
-
-
-
 
                 </div>
             </div>

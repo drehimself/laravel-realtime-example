@@ -1,16 +1,15 @@
 <?php
 
-// For reference
-// Route::get('/podcasts',                    'PodcastsController@index');
-// Route::get('/podcasts/create',             'PodcastsController@create');
-// Route::post('/podcasts',                   'PodcastsController@store');
-// Route::get('/podcasts/{id}',               'PodcastsController@show');
-// Route::get('/podcasts/{id}/edit',          'PodcastsController@edit');
-// Route::patch('/podcasts/{id}',             'PodcastsController@update');
-// Route::delete('/podcasts/{id}',            'PodcastsController@destroy');
+use App\Events\OrderStatusChanged;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/fire', function () {
+    event(new OrderStatusChanged);
+
+    return 'Fired';
 });
 
 Auth::routes();

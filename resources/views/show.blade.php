@@ -14,19 +14,11 @@
                         </div>
                     @endif
 
-                    <div class="progress">
-                        <progressbar :now="progress" type="success" striped animated></progressbar>
-                    </div>
+                    <order-progress status="{{ $order->status->name}}" initial=" {{ $order->status->percent }}" order_id="{{ $order->id }}"></order-progress>
 
-                    <alert v-model="showAlert" placement="top-right" duration="5000" type="success" width="400px" dismissable>
-                        <span class="icon-ok-circled alert-icon-float-left"></span>
-                        <strong>Well Done!</strong>
-                        <p>You successfully read this important alert message.</p>
-                    </alert>
+                    <order-alert user_id="{{ auth()->user()->id }}"></order-alert>
 
-                    <div class="order-status">
-                        <strong>Order Status:</strong> {{ $order->status->name }}
-                    </div>
+
 
                     <hr>
 

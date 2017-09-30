@@ -37,11 +37,13 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ route('user.orders') }}">My Orders</a></li>
-                        <li><a href="{{ route('user.orders.create') }}">Order Pizza</a></li>
+                        @auth
+                            <li><a href="{{ route('user.orders') }}">My Orders</a></li>
+                            <li><a href="{{ route('user.orders.create') }}">Order Pizza</a></li>
 
-                        {{-- Admin Routes --}}
-                        <li><a href="{{ route('admin.orders') }}">ADMIN</a></li>
+                            {{-- Admin Routes --}}
+                            <li><a href="{{ route('admin.orders') }}">ADMIN</a></li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
